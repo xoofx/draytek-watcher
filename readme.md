@@ -109,6 +109,8 @@ sc start DrayTekWatcherService
 sc delete DrayTekWatcherService
 ```
 
+Once installed you can use the `Event Viewer` to check logs, or `service.msc` to control the service (like changing the startup type to `Automatic`).
+
 ## License
 
 This software is released under the [BSD-Clause 2 license](https://opensource.org/licenses/BSD-2-Clause). 
