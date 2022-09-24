@@ -103,7 +103,7 @@ sc create DrayTekWatcherService DisplayName="DrayTek-Watcher Service" binPath="f
 sc start DrayTekWatcherService
 
 # stop
-sc start DrayTekWatcherService
+sc stop DrayTekWatcherService
 
 # delete
 sc delete DrayTekWatcherService

@@ -96,9 +96,9 @@ public class RouterConfiguration
         configuration = null;
         if (filePath == null)
         {
-	        var entryAssembly = Assembly.GetEntryAssembly();
-	        var assemblyPath = Path.GetDirectoryName(entryAssembly!.Location);
-	        filePath = Path.Combine(assemblyPath!, $"{entryAssembly.GetName().Name}.toml");
+            var entryAssembly = Assembly.GetEntryAssembly();
+            var assemblyPath = Path.GetDirectoryName(entryAssembly!.Location);
+            filePath = Path.Combine(assemblyPath!, $"{entryAssembly.GetName().Name}.toml");
 
             logger.LogWarning($"Missing configuration file. Defaulting to {filePath}");
         }
