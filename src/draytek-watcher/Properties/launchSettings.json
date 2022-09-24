@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DrayTekWatcher": {
+      "commandName": "Project",
+      "commandLineArgs": "draytek-watcher.toml"
+    }
+  }
+}

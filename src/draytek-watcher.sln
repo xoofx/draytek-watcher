@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "draytek-watcher", "draytek-watcher\draytek-watcher.csproj", "{FB1C935C-FDB8-4848-BACD-CCCE9EFABED3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrayTekWatcher.Tests", "DrayTekWatcher.Tests\DrayTekWatcher.Tests.csproj", "{EB4C30BE-8B2F-4564-8EB4-C1C96CC91306}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrayTekWatcher", "DrayTekWatcher\DrayTekWatcher.csproj", "{36A1AA71-D1FD-4419-A592-B9439EF0DC6F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2F60BA55-D384-40AB-A4BA-F898B7C6329B}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitattributes = ..\.gitattributes
+		..\.gitignore = ..\.gitignore
+		..\.github\workflows\ci.yml = ..\.github\workflows\ci.yml
+		dotnet-releaser.toml = dotnet-releaser.toml
+		global.json = global.json
+		..\license.txt = ..\license.txt
+		..\readme.md = ..\readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB1C935C-FDB8-4848-BACD-CCCE9EFABED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB1C935C-FDB8-4848-BACD-CCCE9EFABED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB1C935C-FDB8-4848-BACD-CCCE9EFABED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB1C935C-FDB8-4848-BACD-CCCE9EFABED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB4C30BE-8B2F-4564-8EB4-C1C96CC91306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB4C30BE-8B2F-4564-8EB4-C1C96CC91306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB4C30BE-8B2F-4564-8EB4-C1C96CC91306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB4C30BE-8B2F-4564-8EB4-C1C96CC91306}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36A1AA71-D1FD-4419-A592-B9439EF0DC6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36A1AA71-D1FD-4419-A592-B9439EF0DC6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36A1AA71-D1FD-4419-A592-B9439EF0DC6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36A1AA71-D1FD-4419-A592-B9439EF0DC6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {582AF38B-ECF1-4F2C-9663-FDF77602A876}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,18 @@
+# -------------------------------------------------
+# Router configuration
+# -------------------------------------------------
+# Connection settings
+address = "192.168.1.1"
+port = 23
+type = "DrayTek"
+protocol = "telnet"
+username = "admin"
+password = "REPLACE_WITH_YOUR_PASSWORD"
+# WAN number
+wan = 1
+# How often do we check for the router state?
+verify_delay_in_seconds = 300
+# How many times do we try to reconnect the WAN in case of offline?
+retry_count = 4
+# How much time to wait after a retry and before checking if the WAN is back online?
+sleep_in_millis_between_retry_count = 10000

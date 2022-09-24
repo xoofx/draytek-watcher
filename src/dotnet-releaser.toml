@@ -1,0 +1,18 @@
+# configuration file for dotnet-releaser
+profile = "custom"
+[msbuild]
+project = "draytek-watcher.sln"
+[github]
+user = "xoofx"
+repo = "draytek-watcher"
+[nuget]
+publish = false
+[service]
+publish = true
+[service.systemd]
+arguments = "/etc/draytek-watcher.toml"
+[service.systemd.sections.Unit]
+After = "network.target"
+[[pack]]
+rid = "linux-x64"
+kinds = ["deb"]
