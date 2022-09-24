@@ -95,17 +95,17 @@ dotnet build
 
 Currently, only systemd services are supported by [dotnet-releaser](https://github.com/xoofx/dotnet-releaser) for deb and rpm packages. But the tool is working as well as a windows service. Here is how to use the Windows `sc` (Service Control) to register the executable as a service.
 
-```batch
-# create (copy your toml configuration along with the draytek-watcher.exe file)
+```
+:: create (copy your toml configuration along with the draytek-watcher.exe file)
 sc create DrayTekWatcherService DisplayName="DrayTek-Watcher Service" binPath="full\path\to\\draytek-watcher.exe"
 
-# start
+:: start
 sc start DrayTekWatcherService
 
-# stop
+:: stop
 sc stop DrayTekWatcherService
 
-# delete
+:: delete
 sc delete DrayTekWatcherService
 ```
 
