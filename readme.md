@@ -1,6 +1,6 @@
 # draytek-watcher  [![Build Status](https://github.com/xoofx/draytek-watcher/workflows/ci/badge.svg?branch=main)](https://github.com/xoofx/draytek-watcher/actions)
 
-This a small daemon to install on an Linux/Ubuntu box to check the status of the WAN connection of a Draytek router and to reenable it if it seems to be active.
+This a small daemon to install on an Linux/Ubuntu box to check the status of the WAN connection of a Draytek router and to reenable it if it seems to be down.
 
 > **DISCLAIMER**
 >
