@@ -97,7 +97,7 @@ Currently, only systemd services are supported by [dotnet-releaser](https://gith
 
 ```
 :: create (copy your toml configuration along with the draytek-watcher.exe file)
-sc create DrayTekWatcherService DisplayName="DrayTek-Watcher Service" binPath="full\path\to\\draytek-watcher.exe"
+sc create DrayTekWatcherService DisplayName="DrayTek-Watcher Service" binPath="full\path\to\draytek-watcher.exe"
 
 :: start
 sc start DrayTekWatcherService
