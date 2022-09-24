@@ -34,7 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DraytekWatcher\DraytekWatcher.csproj" />
+    <ProjectReference Include="..\DrayTekWatcher\DrayTekWatcher.csproj" />
   </ItemGroup>
 
 </Project>
