@@ -5,6 +5,7 @@
 namespace DrayTekWatcher.Core;
 
 using System.Diagnostics.CodeAnalysis;
+using System.Reflection;
 using Microsoft.Extensions.Logging;
 using Tomlyn;
 using Tomlyn.Model;
@@ -95,8 +96,11 @@ public class RouterConfiguration
         configuration = null;
         if (filePath == null)
         {
-            logger.LogError("Missing configuration file.");
-            return false;
+            var entryAssembly = Assembly.GetEntryAssembly();
+            var assemblyPath = Path.GetDirectoryName(entryAssembly!.Location);
+            filePath = Path.Combine(assemblyPath!, $"{entryAssembly.GetName().Name}.toml");
+
+            logger.LogWarning($"Missing configuration file. Defaulting to {filePath}.");
         }
 
         if (!File.Exists(filePath))
