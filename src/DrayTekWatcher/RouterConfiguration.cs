@@ -36,8 +36,8 @@ public class RouterConfiguration
         Protocol = string.Empty;
         Username = string.Empty;
         Password = string.Empty;
-		WanUpRequest = string.Empty;
-	}
+        WanUpRequest = string.Empty;
+    }
 
     public string Type { get; set; }
 
