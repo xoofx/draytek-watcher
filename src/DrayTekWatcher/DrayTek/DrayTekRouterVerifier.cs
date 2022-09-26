@@ -41,10 +41,10 @@ public class DrayTekRouterVerifier : RouterVerifier
 
             if (await _routerClient.IsWANOnline(wanNumber))
             {
-                Logger.LogInformation("Restarted successfully.");
+                Logger.LogInformation($"Restarted successfully.");
                 await OnWanUp(wanUpRequest);
 
-	            return true;
+                return true;
             }
 
             Logger.LogError($"Restarting failed.");
@@ -55,23 +55,23 @@ public class DrayTekRouterVerifier : RouterVerifier
 
     private async Task OnWanUp(string? wanUpRequest)
     {
-	    try
-	    {
-		    if (string.IsNullOrEmpty(wanUpRequest))
+        try
+        {
+            if (string.IsNullOrEmpty(wanUpRequest))
                 return;
-				
-		    using var client = new HttpClient();
-		    var response = await client.GetAsync(wanUpRequest);
-			
-		    if (!response.IsSuccessStatusCode)
-		    {
-			    Logger.LogWarning($"Unexpected status code for HTTP response: {response.StatusCode} - {response.ReasonPhrase}.");
-		    }
-	    }
-	    catch (Exception e)
-	    {
-		    Logger.LogError($"Failed to contact HTTP service: {e.Message}.");
-	    }
+
+            using var client = new HttpClient();
+            var response = await client.GetAsync(wanUpRequest);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                Logger.LogWarning($"Unexpected status code for HTTP response: {response.StatusCode} - {response.ReasonPhrase}.");
+        }
+        }
+        catch (Exception e)
+        {
+            Logger.LogError($"Failed to contact HTTP service: {e.Message}.");
+        }
     }
 
     internal async Task RestartWan(int wanNumber)
