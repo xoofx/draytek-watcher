@@ -36,7 +36,7 @@ public class RouterConfiguration
         Protocol = string.Empty;
         Username = string.Empty;
         Password = string.Empty;
-        
+        WanUpRequest = string.Empty;
     }
 
     public string Type { get; set; }
@@ -86,6 +86,8 @@ public class RouterConfiguration
         }
     }
 
+    public string WanUpRequest { get; set; }
+
     public override string ToString()
     {
         return $"{nameof(Type)}: {Type}, {nameof(Address)}: {Address}, {nameof(Port)}: {Port}, {nameof(Protocol)}: {Protocol}, {nameof(Username)}: {Username}, {nameof(Password)}: {(Password == null ? null : new string('*', Password.Length))}, {nameof(VerifyDelayInSeconds)}: {VerifyDelayInSeconds}v";
@@ -100,7 +102,7 @@ public class RouterConfiguration
             var assemblyPath = Path.GetDirectoryName(entryAssembly!.Location);
             filePath = Path.Combine(assemblyPath!, $"{entryAssembly.GetName().Name}.toml");
 
-            logger.LogWarning($"Missing configuration file. Defaulting to {filePath}.");
+            logger.LogWarning($"Missing configuration file. Defaulting to `{filePath}'.");
         }
 
         if (!File.Exists(filePath))

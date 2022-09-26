@@ -16,3 +16,5 @@ verify_delay_in_seconds = 300
 retry_count = 4
 # How much time to wait after a retry and before checking if the WAN is back online?
 sleep_in_millis_between_retry_count = 10000
+# Optional HTTP(s)/GET request to be executed after the router is back online
+# wan_up_request = "https://notify.me/user=me&message=Starlink%20is%20up"

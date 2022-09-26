@@ -90,7 +90,7 @@ public class DrayTekWatcherService : IHostedService
                     using var scope = _logger.BeginScope($"WAN{configuration.Wan} -");
 
                     await routerVerifier.Login(configuration.Username ?? "admin", configuration.Password ?? "admin", 2000);
-                    var verifyResult = await routerVerifier.Verify(configuration.Wan, configuration.RetryCount, configuration.SleepInMillisBetweenRetryCount);
+                    var verifyResult = await routerVerifier.Verify(configuration.Wan, configuration.RetryCount, configuration.SleepInMillisBetweenRetryCount, configuration.WanUpRequest);
                     if (!verifyResult)
                     {
                         _logger.LogError($"Restarting failed after {configuration.RetryCount} attempts. Waiting for {configuration.VerifyDelayInSeconds}s for next verify round.");
