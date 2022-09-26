@@ -19,7 +19,7 @@ public abstract class RouterVerifier : IDisposable
 
     public abstract Task Login(string username, string password, int loginTimeOutInMillis);
 
-    public abstract Task<bool> Verify(int wanNumber, int retryCount, int sleepBetweenRetryInMillis);
+    public abstract Task<bool> Verify(int wanNumber, int retryCount, int sleepBetweenRetryInMillis, string? wanUpRequest);
 }
 
 
