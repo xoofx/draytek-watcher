@@ -66,7 +66,7 @@ public class DrayTekRouterVerifier : RouterVerifier
             if (!response.IsSuccessStatusCode)
             {
                 Logger.LogWarning($"Unexpected status code for HTTP response: {response.StatusCode} - {response.ReasonPhrase}.");
-        }
+            }
         }
         catch (Exception e)
         {
